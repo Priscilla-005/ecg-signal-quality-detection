@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ECG Signal Quality & Artifact Detection Using Machine Learning
 
 ## What this project does
@@ -119,3 +120,6 @@ Python, `wfdb`, `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `streamlit`, `j
 pip install -r requirements.txt
 streamlit run app.py
 ```
+=======
+# ecg-signal-quality-detection
+>>>>>>> 9ecc2d48ea143de02f285a8ab1b75e4e1abe72c1
