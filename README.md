@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # ECG Signal Quality & Artifact Detection Using Machine Learning
 
 ## What this project does
 
-This is a Python + machine learning project that looks at short segments
+This is a python and machine learning project that looks at short segments
 of ECG signal and figures out what kind of physical activity the person
 was doing when it was recorded — standing, walking, or jumping. Since
 movement is the main thing that corrupts ECG signals in real wearable
@@ -12,7 +11,7 @@ how much motion artifact a given segment probably has.
 
 ## Why I built this
 
-Wearable ECG monitors are great in theory — they let doctors keep an eye
+Wearable ECG monitors are great in theory - they let doctors keep an eye
 on a patient's heart during normal daily life, not just during a short
 clinic visit. The problem is that once someone starts moving around
 (walking to work, climbing stairs, etc.), the signal gets messy, and
@@ -105,7 +104,7 @@ signal, not a coin flip.
 
 Python, `wfdb`, `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `streamlit`, `joblib`
 
-## Project layout
+
 ## Project layout
 
 - `src/` — core pipeline (load → segment → extract features → split → train)
@@ -120,6 +119,3 @@ Python, `wfdb`, `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `streamlit`, `j
 pip install -r requirements.txt
 streamlit run app.py
 ```
-=======
-# ecg-signal-quality-detection
->>>>>>> 9ecc2d48ea143de02f285a8ab1b75e4e1abe72c1
