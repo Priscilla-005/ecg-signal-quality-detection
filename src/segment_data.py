@@ -6,12 +6,12 @@ def segment_signal(signal, window_size):
     return windows
 from load_dataset import all_records
 
-WINDOW_SIZE = 500  # 1 seconds at 500 Hz
+WINDOW_SIZE = 500 
 
-all_windows = []  # will hold one entry per window, with its label
+all_windows = []  
 
 for entry in all_records:
-    signal = entry["signal"][:, 0]  # just channel 0 (ECG 1) for now
+    signal = entry["signal"][:, 0] 
     label = entry["label"]
 
     windows = segment_signal(signal, WINDOW_SIZE)
