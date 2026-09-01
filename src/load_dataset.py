@@ -1,4 +1,4 @@
-# Step 1: Get the list of all record names in the dataset
+
 with open("dataset/RECORDS", "r") as f:
     record_names = f.read().splitlines()
 print("Total records found:", len(record_names))
@@ -8,14 +8,12 @@ def get_label_from_name(name):
     label_map = {"s": 0, "w": 1, "j": 2}
     return label_map[activity_letter]
 
-# Test it on all record names
 for name in record_names:
     label = get_label_from_name(name)
     print(name, "->", label)
 
 import wfdb
 
-# Load one record's signal data to confirm it works before looping over all 27
 first_record_name = record_names[0]
 record = wfdb.rdrecord(f"dataset/{first_record_name}")
 
@@ -24,7 +22,6 @@ print("Sampling frequency:", record.fs)
 print("Number of channels:", record.n_sig)
 print("Signal shape:", record.p_signal.shape)
 
-# Load every record's signal data and label, store them together
 all_records = []
 
 for name in record_names:
