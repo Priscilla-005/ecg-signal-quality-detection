@@ -48,10 +48,9 @@ if st.button("Analyze"):
     low_freq_ratio = low_freq_energy / total_energy
     high_freq_ratio = high_freq_energy / total_energy
 
-    # --- Combine into the same column order used during training ---
     features = [[mean, std, variance, rms, min_val, max_val, range_val, low_freq_ratio, high_freq_ratio]]
 
-    # --- Model prediction ---
+    #Model prediction
     prediction = model.predict(features)[0]
     prediction_proba = model.predict_proba(features)[0]
 
@@ -76,7 +75,7 @@ if st.button("Analyze"):
         "Jumping": f"{prediction_proba[2]*100:.1f}%"
     })
 
-    # --- Plot the signal ---
+    # Plot the signal
     fig, ax = plt.subplots(figsize=(10, 3))
     ax.plot(window)
     ax.set_title(f"ECG Signal - {selected_record} (first 1 second)")
